@@ -33,9 +33,3 @@ def step_impl(context, fragment):
 def step_impl(context):
     wait = WebDriverWait(context.driver, 15)
     wait.until(EC.presence_of_element_located((By.CLASS_NAME, 'openedHomeTitle')))
-
-
-@step("I take screenshot to {file}")
-def step_impl(context, file):
-
-    context.driver.get_screenshot_as_file(file)
